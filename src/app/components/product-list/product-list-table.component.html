@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+            <tr>
+                <th> Zdjęcie</th>
+                <th >Tytuł</th>
+                <th >Cena</th>
+                <th >Opis</th>
+                <th >SKU</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempProduct of products">
+            <td class="align-middle">
+                <img width="30px"src="{{tempProduct.imageUrl}}"/>
+            </td>
+
+            <td class="align-middle">{{tempProduct.name}}</td>
+            
+            <td class="align-middle">{{tempProduct.unitPrice | currency:'PLN'}}</td>
+            <td class="align-middle">{{tempProduct.description}}</td>
+            <td class="align-middle">{{tempProduct.sku}}</td>
+        </tr>       
+    </tbody>   
+</table>
+
+
